@@ -2,11 +2,24 @@
 
 <html>
     <head>
-        <title>Django Day 2</title>
+        <title>Django Day 3</title>
     </head>
 
     <body>
-        <h1>Welcome to Django Day 2</h1>
-        <p>Mera pehla Django HTML page</p>
+        <h1>Hello {{Username}} </h1>
+        <h1> {{Age}} </h1>
+        {% if Age > 18 %}
+            <P> Adult </P>
+        {% else %}
+            <P> Minor </P>
+        {% endif %}
+
+        <h2>Skill:</h2>
+
+        <ui>
+            {% for skill in Skill_List %}
+                <li> {{skill}} </li>
+            {% endfor %}
+        </ui>
     </body>
 </html>
