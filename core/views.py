@@ -11,7 +11,10 @@ def home(request):
         'Skill_List': Skill,
         'Age': age,
     }
-    return render(request, 'home.html',context)
+    return render(request, 'core/home.html',context)
+
+def about(request):
+    return render(request, "core/about.html")
 
 
 # Create your views here.

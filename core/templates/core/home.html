@@ -1,0 +1,22 @@
+{% extends "core/base.html" %}
+
+{% block title %} Home {% endblock %}    
+
+{% block content %}
+    <h1>Hello {{Username}} </h1>
+    <h1> {{Age}} </h1>
+    {% if Age > 18 %}
+        <P> Adult </P>
+     {% else %}
+        <P> Minor </P>
+    {% endif %}
+
+    <h2>Skill:</h2>
+
+    <ui>
+        {% for skill in Skill_List %}
+            <li> {{skill}} </li>
+        {% endfor %}
+    </ui>
+{% endblock %}
+
