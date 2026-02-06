@@ -1,16 +1,28 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="{% static 'core/style.css' %}">
         <title> {% block title %} My Website {% endblock %} </title>
+        
+
     </head>
     <body>
+
         <h1>Django website</h1>
-        <a href="/">Home</a>
-        <a href="about/">About</a>
+        <div class="container">
+            <a href="/">Home</a>
+            <a href="about/">About</a>
+            <hr>
+            {% block content %}
+            {% endblock %}
+
+        </div>
+
         <hr>
-        {% block content %}
-        {% endblock %}
-        <hr>
-        <p>© 2026 my Website</p>
+        <div class="footer">
+            <p>© 2026 my Website</p>
+        </div>
     </body>
 </html>
